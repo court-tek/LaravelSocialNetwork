@@ -1,0 +1,19 @@
+#foot-container{
+  background-color: $cyanType3;
+
+  .foot-main{
+    padding: 24px;
+    text-align: center;
+    ul{
+      display: inline-block;
+      li{
+        font-size: 13px;
+        padding-left: 12px;
+        display: inline-block;
+      }
+    }
+    span{
+      padding-left: 30px;
+    }
+  }
+}

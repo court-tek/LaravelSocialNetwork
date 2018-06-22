@@ -1,0 +1,27 @@
+// Error messages
+.error{
+  text-align: center;
+}
+
+// Login or Register
+.signIn{
+  @include container;
+  .card{
+    @include box1;
+  }
+
+  .noAccount{
+    @include box2;
+  }
+}
+
+.sign-Up{
+  @include container;
+  .card{
+    @include box1;
+  }
+
+  .hasAccount{
+    @include box2;
+  }
+}

@@ -1,0 +1,53 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Reset
+@import "reset";
+// Variables
+@import "variables";
+// Grid
+@import "grid/grid12";
+// Mixins
+@import "mixins/mixins";
+
+// Components
+@import "header";
+
+@import "footer";
+
+@import "loginSignup";
+
+@import "dashboard";
+
+@import "timeline";
+
+*{margin: 0;}
+
+html{
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.foot-container{
+  height: 60px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#container {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+#main {
+  height: 50px;
+}
+// End Main area
