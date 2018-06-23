@@ -1507,140 +1507,32 @@ header .head-container .user-area a {
   text-align: center;
 }
 
-.signIn {
-  margin-top: 90px;
-  top: 50px;
-  bottom: 0;
+#weclome-container {
+  display: block;
+  position: absolute;
+  min-height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 400px;
 }
 
-.signIn .card {
-  margin: 0 auto;
-  width: 340px;
-  height: 275px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-}
-
-.signIn .card h1 {
-  margin-top: 30px;
-  font-size: 43px;
-}
-
-.signIn .card form {
-  margin-top: 15px;
-}
-
-.signIn .card form .form-pack {
-  margin-top: 5px;
-}
-
-.signIn .card form .form-pack input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  width: 258px;
-  height: 36px;
-}
-
-.signIn .card form button {
-  margin-top: 15px;
-  width: 258px;
-  height: 28px;
-  background: #6cf;
-  border: #6cf;
-  border-radius: 3px;
-  color: #fff;
-}
-
-.signIn .noAccount {
-  margin: 0 auto;
-  margin-top: 12px;
-  width: 340px;
-  height: 70px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding-bottom: 35px;
-}
-
-.signIn .noAccount p {
-  color: #262626;
-  font-size: 15px;
-  padding: 28px;
-  text-align: center;
-}
-
-.signIn .noAccount p a {
-  text-decoration: none;
-}
-
-.sign-Up {
-  margin-top: 90px;
-  top: 50px;
-  bottom: 0;
-}
-
-.sign-Up .card {
-  margin: 0 auto;
-  width: 340px;
-  height: 275px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-}
-
-.sign-Up .card h1 {
-  margin-top: 30px;
-  font-size: 43px;
-}
-
-.sign-Up .card form {
-  margin-top: 15px;
-}
-
-.sign-Up .card form .form-pack {
-  margin-top: 5px;
-}
-
-.sign-Up .card form .form-pack input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  width: 258px;
-  height: 36px;
-}
-
-.sign-Up .card form button {
-  margin-top: 15px;
-  width: 258px;
-  height: 28px;
-  background: #6cf;
-  border: #6cf;
-  border-radius: 3px;
-  color: #fff;
-}
-
-.sign-Up .hasAccount {
-  margin: 0 auto;
-  margin-top: 12px;
-  width: 340px;
-  height: 70px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding-bottom: 35px;
-}
-
-.sign-Up .hasAccount p {
-  color: #262626;
-  font-size: 15px;
-  padding: 28px;
-  text-align: center;
-}
-
-.sign-Up .hasAccount p a {
-  text-decoration: none;
+#weclome2 {
+  display: none;
+  position: absolute;
+  min-height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 400px;
 }
 
 .post-it {
-  padding-top: 90px;
+  padding: 90px 20px 20px;
+  background: #EDEDED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 50%;
   color: #111;
@@ -1812,35 +1704,58 @@ header .head-container .user-area a {
   width: 4%;
 }
 
-* {
-  margin: 0;
-}
-
-html {
+html,
+body {
   font-family: 'Raleway', sans-serif;
   height: 100%;
+  background: #EDEDED;
 }
 
 body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
-.foot-container {
-  height: 60px;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #container {
-  min-height: 100%;
-  /* Equal to height of footer */
-  /* But also accounting for potential margin-bottom of last child */
-  margin-bottom: -50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
-#main {
-  height: 50px;
+#foot-container {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.elJefe {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app-container {
+  position: relative;
+  width: 90%;
+  max-width: 1300px;
+  min-height: calc(100vh - 15vh);
+  background: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  background: url("https://images.unsplash.com/photo-1525078961872-3001df219a7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1f64e529da6469e0528f905ed09368d0&auto=format&fit=crop&w=709&q=80");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
 }
 

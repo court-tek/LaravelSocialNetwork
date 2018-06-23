@@ -4,24 +4,46 @@
 }
 
 // Login or Register
-.signIn{
-  @include container;
-  .card{
-    @include box1;
-  }
-
-  .noAccount{
-    @include box2;
-  }
+#weclome-container{
+  display: block;
+  position: absolute;
+  min-height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 400px;
 }
 
-.sign-Up{
-  @include container;
-  .card{
-    @include box1;
-  }
-
-  .hasAccount{
-    @include box2;
-  }
+#weclome2{
+  display: none;
+  position: absolute;
+  min-height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 400px;
 }
+//
+// .sign-In{
+//   display: inline-block;
+//   @include container;
+//   .card{
+//     @include box1;
+//   }
+//
+//   .noAccount{
+//     @include box2;
+//   }
+// }
+//
+// .sign-Up{
+//   display: inline-block;
+//   @include container;
+//   .card{
+//     @include box1;
+//   }
+//
+//   .hasAccount{
+//     @include box2;
+//   }
+// }

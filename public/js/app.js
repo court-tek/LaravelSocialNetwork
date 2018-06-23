@@ -60,92 +60,94 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 11:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(12);
-module.exports = __webpack_require__(43);
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
-
-/***/ 12:
+/* 1 */
 /***/ (function(module, exports) {
 
-// loginSignup script
-var signUp = document.querySelector('.signUp');
-var logIn = document.querySelector('.logIn');
-var div = document.querySelector('.signIn');
-var div2 = document.querySelector('.sign-Up');
-var liError = document.querySelector('.error');
-var signBtn = document.querySelector('._signup');
-var elForm = document.querySelector('#theForm');
-// modal
-var modal = document.getElementById("simpleModal");
-// open modal button
-var modalBtn = document.querySelector(".modalclick");
-// Cancel button
-var cancel = document.getElementById("cancelBtn");
+window.onload = function () {
+  // loginSignup scripts
 
-// Open modal
-modalBtn.addEventListener('click', function () {
-  modal.style.display = 'block';
-});
+  // Top card button
+  var logIn = document.querySelector("._logIn");
+  /////////////////////////////////////////////////
+  // bottom card button
+  var signBtn = document.querySelector("._signup");
+  // //////////////////////////////////////////////
+  // Errors
+  var liError = document.querySelector(".error");
+  var elForm = document.querySelector("#theForm");
+  // /////////////////////////////////////////////
 
-// Close modal
-cancel.addEventListener('click', function () {
-  modal.style.display = 'none';
-});
-// Close by outside modal
-modal.addEventListener('click', function () {
+  // Options modal
+  var modal = document.getElementById("simpleModal");
+  // open modal button
+  var modalBtn = document.getElementById("modalclick");
+  // Cancel button
+  var cancel = document.getElementById("cancelBtn");
+  // //////////////////////////////////////////////////
+
+  // Open modal
+  if (modalBtn) {
+    modalBtn.addEventListener("click", openModal);
+  }
+
+  // Close modal
+  if (cancel) {
+    cancel.addEventListener("click", closeModal);
+  }
+
+  // Close by outside modal
+  if (modal) {
+    modal.addEventListener("click", outsideClick);
+  }
+};
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+function outsideClick(e) {
   if (e.target == modal) {
-    modal.style.display = 'none';
+    modal.style.display = "none";
   }
-});
+}
 
-signUp.addEventListener('click', function () {
-  if (div2.classList.contains('visible-md')) {
-    div2.classList.remove('visible-md');
-    div.classList.add('visible-md');
-  }
-});
+function chk(e) {
 
-logIn.addEventListener('click', function () {
-  if (div.classList.contains('visible-md')) {
-    div.classList.remove('visible-md');
-    div2.classList.add('visible-md');
-  }
-});
-
-// function chk(e) {
-//
-//   var email = document.querySelector('#email').value;
-//   var dataString = 'email=' + email;
-//   e.preventDefault();
-//   $.ajax({
-//     type: 'post',
-//       data: dataString,
-//       cache: false,
-//       url: "<?php echo url('/signup') ?>",
-//       success:function(data){
-//         console.log(data);
-//       }
-//   });
-//
-// };
+  var email = document.querySelector('#email').value;
+  var dataString = 'email=' + email;
+  e.preventDefault();
+  $.ajax({
+    type: 'post',
+    data: dataString,
+    cache: false,
+    url: "<?php echo url('/signup') ?>",
+    success: function success(data) {
+      console.log(data);
+    }
+  });
+}
 
 /***/ }),
-
-/***/ 43:
+/* 2 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);

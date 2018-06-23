@@ -12,15 +12,12 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-
     </head>
-    <body>
-      @include('includes.header')
-        <div id="container">
-                @yield('content')
-
+    <body class="elJefe">
+        <div id="app-container">
+          @yield('bible')
         </div>
-        @include('includes.footer')
+        {{-- @include('includes.footer') --}}
         @include('includes.awesomeSauce')
         <script src="{{asset('js/app.js')}}" ></script>
     </body>
