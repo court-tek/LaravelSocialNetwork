@@ -22,30 +22,36 @@ header {
     .search-area {
       margin: 0 auto;
       position: relative;
-      min-width: 215px;
-      width: 125px;
-      // padding: 0;
-      border-radius: 4px;
+      min-width: 260px;
+      width: 250px;
+      padding-left: 80px;
+      // border-radius: 4px;
 
-      ._qvcci {
-        // height: 100%;
+      ._qvcci[type=text] {
+        background-color: #fff;
+        border: 1px solid grey;
+        height: 28px;
+        border-radius: 3px;
         width: 100%;
+        outline: none;
         padding: 3px 10px 3px 26px;
       }
 
       .mag-glass {
+        color: grey;
         display: inline-block;
         position: absolute;
         font-size: 12px;
-        top: 7px;
-        left: 10px;
+        top: 9px;
+        left: 85px;
       }
 
       ._x {
+        color: grey;
         position: absolute;
         display: inline-block;
-        left: 191px;
-        top: 7px;
+        left: 242px;
+        top: 9px;
         font-size: 13px;
       }
     }

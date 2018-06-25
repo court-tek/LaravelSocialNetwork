@@ -20,6 +20,6 @@
         </div>
         @include('includes.footer')
         @include('includes.awesomeSauce')
-        <script src="{{asset('js/app.js')}}" ></script>
+        <script src="{{mix('js/app.js')}}" ></script>
     </body>
 </html>

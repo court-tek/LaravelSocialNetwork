@@ -111,3 +111,24 @@
     color: #fff;
   }
 }
+
+// Modal black out
+@mixin modalTint {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+@mixin modalContent {
+  background-color: #f4f4f4;
+  border-radius: 18px;
+  margin: 10% auto;
+  width: 320px;
+  height: 320px;
+}

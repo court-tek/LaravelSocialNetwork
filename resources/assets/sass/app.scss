@@ -21,7 +21,6 @@
 
 @import "timeline";
 
-
 html,body{
   font-family: 'Raleway', sans-serif;
   height: 100%;
@@ -34,6 +33,7 @@ body{
 }
 
 #container {
+  display: flex;
   flex: 1 0 auto;
 }
 
@@ -41,7 +41,6 @@ body{
   flex-shrink: 0;
 }
 // End Main area
-
 .elJefe{
   min-height: 100vh;
   display: flex;
