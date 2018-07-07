@@ -12,73 +12,23 @@ $(document).ready(function() {
     $('#postModal').show();
   });
 
-});
+  $('._login').on('click', function() {
+    $('#welcome2').show();
+  });
 
-//
-// window.onload = function() {
-//   // loginSignup scripts
-//
-//   // Top card button
-//   let logIn = document.querySelector("._logIn");
-//   /////////////////////////////////////////////////
-//   // bottom card button
-//   let signBtn = document.querySelector("._signup");
-//   // //////////////////////////////////////////////
-//   // Errors
-//   let liError = document.querySelector(".error");
-//   let elForm = document.querySelector("#theForm");
-//   // /////////////////////////////////////////////
-//
-//   // Options modal
-//   let modal = document.getElementById("simpleModal");
-//   // open modal button
-//   var modalBtn = document.getElementById("modalclick");
-//   // Cancel button
-//   let cancel = document.getElementById("cancelBtn");
-//   // //////////////////////////////////////////////////
-//
-//   // Open modal
-//   if (modalBtn) {
-//     modalBtn.addEventListener("click", openModal);
-//   }
-//
-//   // Close modal
-//   if (cancel) {
-//     cancel.addEventListener("click", closeModal);
-//   }
-//
-//   // Close by outside modal
-//   if (modal) {
-//     modal.addEventListener("click", outsideClick);
-//   }
-// };
-//
-// function openModal() {
-//   modal.style.display = "block";
-// }
-//
-// function closeModal() {
-//   modal.style.display = "none";
-// }
-//
-// function outsideClick(e) {
-//   if (e.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-//
-// function chk(e) {
-//
-//   var email = document.querySelector('#email').value;
-//   var dataString = 'email=' + email;
-//   e.preventDefault();
-//   $.ajax({
-//     type: 'post',
-//       data: dataString,
-//       cache: false,
-//       url: "<?php echo url('/signup') ?>",
-//       success:function(data){
-//         console.log(data);
-//       }
-//   });
-// }
+  $('._signup').on('click', function() {
+    $('#welcome2').hide();
+  });
+
+  var postId = 0;
+  $('#comment_form').on('submit', function(event) {
+    event.preventDefault();
+    var text = $('#add_comment').val();
+    var posstId = $('.cardee').data('postid');
+    $.post(url, { comment: text, postId: posstId, _token: token }, function(data){
+      // console.log(data);.
+    },"json").done(function(msg) {
+      console.log(msg['message']);
+    });
+  });
+});

@@ -1426,7 +1426,7 @@ header {
   width: 100%;
   height: 77px;
   padding: 20px;
-  z-index: 6;
+  z-index: 10;
 }
 
 header .head-container {
@@ -1514,29 +1514,175 @@ header .head-container .user-area a {
   text-align: center;
 }
 
-#weclome-container {
-  display: block;
+.welcome-box {
   position: absolute;
-  min-height: 100%;
+  top: 205px;
+  right: 399px;
   background: #fff;
-  top: 0;
-  right: 0;
-  width: 400px;
+  padding: 8px;
 }
 
-#weclome2 {
-  display: none;
+.welcome-box h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+#weclome-container {
   position: absolute;
   min-height: 100%;
   background: #fff;
+  padding: 28px;
   top: 0;
   right: 0;
   width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: block;
+}
+
+#weclome-container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: grey;
+  text-align: center;
+}
+
+#weclome-container .a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#weclome-container P:nth-of-type(2) {
+  line-height: normal;
+  padding: 1rem 0 4rem;
+}
+
+#weclome-container .c {
+  font-size: 14px;
+  color: #262626;
+}
+
+#weclome-container .c ._login {
+  padding-left: 4px;
+  text-decoration: none;
+}
+
+#weclome-container input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#weclome-container input[type=submit] {
+  width: 100%;
+  background-color: #6cf;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#weclome-container input[type=submit]:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+#welcome2 {
+  position: absolute;
+  min-height: 100%;
+  background: #fff;
+  padding: 28px;
+  top: 0;
+  right: 0;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: none;
+}
+
+#welcome2 p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: grey;
+  text-align: center;
+}
+
+#welcome2 .a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#welcome2 P:nth-of-type(2) {
+  line-height: normal;
+  padding: 1rem 0 4rem;
+}
+
+#welcome2 P:nth-of-type(2) a {
+  text-decoration: none;
+  color: #262626;
+}
+
+#welcome2 .c {
+  font-size: 14px;
+  color: #262626;
+}
+
+#welcome2 .c ._signup {
+  padding-left: 4px;
+  text-decoration: none;
+}
+
+#welcome2 input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#welcome2 input[type=submit] {
+  width: 100%;
+  background-color: #6cf;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#welcome2 input[type=submit]:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 
 .post-it {
   padding: 90px 20px 20px;
-  background: #EDEDED;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1859,135 +2005,10 @@ header .head-container .user-area a {
   background-color: #FD3253;
 }
 
-.containerI {
+.container-for-all {
   z-index: 3;
-  width: 100%;
-  height: 100%;
-  background: #fafafa;
-  padding-top: 50px;
-  position: absolute;
-  top: 50px;
-  bottom: 0;
-}
-
-.containerI .cardee {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #fff;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  max-height: 1000px;
-  width: 500px;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-}
-
-.containerI .cardee .card-header {
-  padding: 15px;
-}
-
-.containerI .cardee .card-header .profile-img {
-  display: inline-block;
-  background: green;
-  height: 29px;
-  width: 29px;
-  border-radius: 30px;
-  position: relative;
-  top: 3px;
-  margin-right: 5px;
-}
-
-.containerI .cardee .card-header .profile-info {
-  display: inline-block;
-}
-
-.containerI .cardee .card-header .profile-info .name {
-  color: #262626;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.containerI .cardee .card-header .profile-info .location {
-  font-weight: 400;
-  font-size: 12px;
-}
-
-.containerI .cardee .card-header .profile-info .location a {
-  text-decoration: none;
-  color: #262626;
-}
-
-.containerI .cardee .card-header .profile-info .location a:hover {
-  cursor: pointer;
-}
-
-.containerI .cardee .content img {
-  width: 100%;
-}
-
-.containerI .cardee .card-footer {
-  padding: 16px;
-}
-
-.containerI .cardee .card-footer .deew12 {
-  padding-bottom: 6px;
-}
-
-.containerI .cardee .card-footer .likes {
-  color: #262626;
-  font-size: 14px;
-  padding-bottom: 13px;
-  font-weight: 800;
-}
-
-.containerI .cardee .card-footer .comments .list-group-item {
-  font-size: 14px;
-  padding-bottom: 8px;
-  font-weight: 500;
-}
-
-.containerI .cardee .card-footer .comments .list-group-item .friends {
-  font-weight: 800;
-}
-
-.containerI .cardee .card-footer .time-since {
-  padding-bottom: 10px;
-}
-
-.containerI .cardee .card-footer .time-since p {
-  font-size: 13px;
-}
-
-.containerI .cardee .card-footer form {
-  padding-top: 15px;
-  border-top: 1px solid #e6e6e6;
-}
-
-.containerI .cardee .card-footer form #item {
-  border: 0 solid;
-  display: inline-block;
-  width: 70%;
-}
-
-.containerI .cardee .card-footer form #item:focus {
-  outline: none;
-}
-
-.containerI .cardee .card-footer form .options {
-  display: inline-block;
-  float: right;
-  width: 4%;
-}
-
-html,
-body {
-  font-family: 'Raleway', sans-serif;
-  height: 100%;
-  background: #EDEDED;
-}
-
-body {
+  max-width: 750px;
+  margin: 100px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1997,18 +2018,191 @@ body {
           flex-direction: column;
 }
 
-#container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container-for-all .cardee {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1;
+          flex: 1;
+  width: 580px;
+  background: #fff;
+  margin: 0 auto 60px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+
+.container-for-all .cardee .card-header {
+  position: relative;
+  padding: 15px;
+  border-bottom: #e6e6e6;
+  z-index: 3;
+}
+
+.container-for-all .cardee .card-header .ui-face {
+  display: inline-block;
+  border-radius: 55%;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+  z-index: 2;
+}
+
+.container-for-all .cardee .card-header .ui-face img {
+  height: 31px;
+  width: 31px;
+  border-radius: 55%;
+}
+
+.container-for-all .cardee .card-header .ui-face:hover {
+  cursor: pointer;
+}
+
+.container-for-all .cardee .card-header .user-name1 {
+  position: absolute;
+  font-weight: 400;
+  font-size: 14px;
+  top: 27px;
+  left: 58px;
+}
+
+.container-for-all .cardee .card-header .user-name1 a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.container-for-all .cardee .card-header .user-name1 a:hover {
+  cursor: pointer;
+}
+
+.container-for-all .content img {
+  width: 100%;
+}
+
+.container-for-all .card-footer {
+  padding: 16px;
+}
+
+.container-for-all .card-footer .deew12 {
+  padding-bottom: 6px;
+}
+
+.container-for-all .card-footer .likes {
+  color: #262626;
+  font-size: 14px;
+  padding-bottom: 13px;
+  font-weight: 800;
+}
+
+.container-for-all .card-footer .likes:hover {
+  cursor: pointer;
+}
+
+.container-for-all .card-footer .comments {
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  -webkit-box-flex: 10px;
+      -ms-flex-positive: 10px;
+          flex-grow: 10px;
+  -ms-flex-negative: 10;
+      flex-shrink: 10;
+}
+
+.container-for-all .card-footer .comments .authDescription,
+.container-for-all .card-footer .comments .usersComments {
+  font-size: 14px;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+
+.container-for-all .card-footer .comments .authDescription .people,
+.container-for-all .card-footer .comments .authDescription .userN,
+.container-for-all .card-footer .comments .usersComments .people,
+.container-for-all .card-footer .comments .usersComments .userN {
+  font-weight: 800;
+}
+
+.container-for-all .card-footer .comments .authDescription .people:hover,
+.container-for-all .card-footer .comments .authDescription .userN:hover,
+.container-for-all .card-footer .comments .usersComments .people:hover,
+.container-for-all .card-footer .comments .usersComments .userN:hover {
+  cursor: pointer;
+}
+
+.container-for-all .card-footer .comments .authDescription .fa-times2:hover,
+.container-for-all .card-footer .comments .authDescription .fa-times3:hover,
+.container-for-all .card-footer .comments .usersComments .fa-times2:hover,
+.container-for-all .card-footer .comments .usersComments .fa-times3:hover {
+  cursor: pointer;
+}
+
+.container-for-all .card-footer .time-since {
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+
+.container-for-all .card-footer .time-since p {
+  font-size: 13px;
+}
+
+.container-for-all .card-footer form {
+  position: relative;
+  padding-top: 15px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.container-for-all .card-footer form button {
+  position: absolute;
+  background-color: #fff;
+  color: #008CBA;
+  right: 27px;
+  font-size: 13.5px;
+  font-weight: bold;
+}
+
+.container-for-all .card-footer form button:focus,
+.container-for-all .card-footer form button:hover {
+  outline: none;
+  cursor: pointer;
+}
+
+.container-for-all .card-footer form #item {
+  border: 0 solid;
+  display: inline-block;
+  width: 70%;
+}
+
+.container-for-all .card-footer form #item:focus {
+  outline: none;
+}
+
+.container-for-all .card-footer form .options {
+  display: inline-block;
+  float: right;
+  width: 4%;
+}
+
+.container-for-all .card-footer form .options:hover {
+  outline: none;
+  cursor: pointer;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background: #ededed;
+}
+
+#container {
+  position: relative;
 }
 
 #foot-container {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .elJefe {
@@ -2029,10 +2223,9 @@ body {
   width: 90%;
   max-width: 1300px;
   min-height: calc(100vh - 15vh);
-  background: #fff;
   overflow: hidden;
   border-radius: 5px;
-  background: url("https://images.unsplash.com/photo-1525078961872-3001df219a7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1f64e529da6469e0528f905ed09368d0&auto=format&fit=crop&w=709&q=80");
+  background: url("https://images.unsplash.com/photo-1530883384668-db906d974ff9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=15235a0796469470d7c10d5aa13215bf&auto=format&fit=crop&w=1543&q=80");
   background-size: cover;
   background-position: center center;
   background-repeat: none;

@@ -1,102 +1,172 @@
-.containerI {
+// .containerI {
+//   z-index: 3;
+//   width: 100%;
+//   height: 1//
+//   padding-top: 100px;
+//   // position: absolute;
+//   top: 50px;
+//   bottom: 0;
+
+.container-for-all {
   z-index: 3;
-  width: 100%;
-  height: 100%;
-  background: #fafafa;
-  padding-top: 50px;
-  position: absolute;
-  top: 50px;
-  bottom: 0;
+  max-width: 750px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
   .cardee {
-    align-items: center;
+    flex: 1;
+    // min-width: 580px;
+    width: 580px;
     background: #fff;
-    margin: 0 auto;
-    margin-bottom: 60px;
-    // margin-left: 400px;
-    max-height: 1000px;
-    width: 500px;
+    margin: 0 auto 60px;
     border: 1px solid #e6e6e6;
     border-radius: 3px;
-    .card-header {
-      padding: 15px;
+    // display: flex;
 
-      .profile-img {
+    .card-header {
+      position: relative;
+      padding: 15px;
+      border-bottom: #e6e6e6;
+      z-index: 3;
+
+      .ui-face {
         display: inline-block;
-        background: green;
-        height: 29px;
-        width: 29px;
-        border-radius: 30px;
+        border-radius: 55%;
         position: relative;
         top: 3px;
         margin-right: 5px;
-      }
-      .profile-info {
-        display: inline-block;
-        .name {
-          color: #262626;
-          font-size: 14px;
-          font-weight: 600;
+        z-index: 2;
+
+        img {
+          height: 31px;
+          width: 31px;
+          border-radius: 55%;
         }
-        .location {
-          font-weight: 400;
-          font-size: 12px;
-          a {
-            text-decoration: none;
-            color: #262626;
-            &:hover {
-              cursor: pointer;
-            }
-          }
+
+        &:hover {
+          cursor: pointer;
         }
       }
-    }
-    .content {
-      img {
-        width: 100%;
-      }
-    }
-    .card-footer {
-      padding: 16px;
-      .deew12 {
-        padding-bottom: 6px;
-      }
-      .likes {
-        color: #262626;
+
+      .user-name1 {
+        position: absolute;
+        font-weight: 400;
         font-size: 14px;
-        padding-bottom: 13px;
-        font-weight: 800;
-      }
-      .comments {
-          .list-group-item {
-            font-size: 14px;
-            padding-bottom: 8px;
-            font-weight: 500;
-            .friends{
-              font-weight: 800;
+        top: 27px;
+        left: 58px;
+
+        a {
+          text-decoration: none;
+          color: #262626;
+
+          &:hover {
+            cursor: pointer;
           }
         }
       }
-      .time-since{
-        padding-bottom: 10px;
-        p{
-          font-size: 13px;
-        }
+    }
+  }
+
+  .content {
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-footer {
+    padding: 16px;
+
+    .deew12 {
+      padding-bottom: 6px;
+    }
+
+    .likes {
+      color: #262626;
+      font-size: 14px;
+      padding-bottom: 13px;
+      font-weight: 800;
+
+      &:hover {
+        cursor: pointer;
       }
-      form{
-        padding-top: 15px;
-        border-top: 1px solid #e6e6e6;
-        #item{
-          border: 0 solid;
-          display: inline-block;
-          width: 70%;
-          &:focus{
-            outline: none;
+    }
+
+    .comments {
+      flex-basis: 400px;
+      flex-grow: 10px;
+      flex-shrink: 10;
+
+      .authDescription,
+      .usersComments {
+        font-size: 14px;
+        padding-bottom: 8px;
+        font-weight: 500;
+
+        .people,
+        .userN {
+          font-weight: 800;
+
+          &:hover {
+            cursor: pointer;
           }
         }
-        .options{
-          display: inline-block;
-          float: right;
-          width: 4%;
+
+        .fa-times2,
+        .fa-times3 {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .time-since {
+      padding-top: 4px;
+      padding-bottom: 10px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    form {
+      position: relative;
+      padding-top: 15px;
+      border-top: 1px solid #e6e6e6;
+
+      button {
+        position: absolute;
+        background-color: #fff;
+        color: #008CBA;
+        right: 27px;
+        font-size: 13.5px;
+        font-weight: bold;
+
+        &:focus,
+        &:hover {
+          outline: none;
+          cursor: pointer;
+        }
+      }
+
+      #item {
+        border: 0 solid;
+        display: inline-block;
+        width: 70%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .options {
+        display: inline-block;
+        float: right;
+        width: 4%;
+
+        &:hover {
+          outline: none;
+          cursor: pointer;
         }
       }
     }

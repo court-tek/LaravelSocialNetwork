@@ -1,64 +1,60 @@
 /* mixins */
-
 // Login or SignUp
 @mixin container {
-  margin-top: 90px;
-  top: 50px;
-  bottom: 0;
+  position: absolute;
+  min-height: 100%;
+  background: #fff;
+  padding: 28px;
+  top: 0;
+  right: 0;
+  width: 400px;
+  display: flex;
+  align-content: center;
 }
-@mixin box1 {
-  margin: 0 auto;
-  width: 340px;
-  height: 275px;
-  text-align: center;
+@mixin formInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 2px;
-  background-color: #fff;
-  h1 {
-    margin-top: 30px;
-    font-size: 43px;
-  }
-  form {
-    margin-top: 15px;
-    .form-pack {
-      margin-top: 5px;
-      input {
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        width: 258px;
-        height: 36px;
-      }
-    }
-    button {
-      margin-top: 15px;
-      width: 258px;
-      height: 28px;
-      background: $cyanType3;
-      border: $cyanType3;
-      border-radius: 3px;
-      color: #fff;
-    }
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+@mixin theButton {
+  width: 100%;
+  background-color: $cyanType3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover{
+    filter: brightness(80%);
   }
 }
 
-@mixin box2 {
-  margin: 0 auto;
-  margin-top: 12px;
-  width: 340px;
-  height: 70px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding-bottom: 35px;
-  background-color: #fff;
-  p {
+@mixin welcomeParagraph {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  text-align: center;
+}
+@mixin parag1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+@mixin parag2 {
+  line-height: normal;
+  padding: 1rem 0 4rem;
+}
+@mixin parag3 {
+    font-size: 14px;
     color: #262626;
-    font-size: 15px;
-    padding: 28px;
-    text-align: center;
-    a {
-      text-decoration: none;
-    }
-  }
+}
+@mixin parag3_2 {
+    padding-left: 4px;
+    text-decoration: none;
 }
 // End logIn
 
@@ -67,20 +63,21 @@
   // width: 530px;
   // height: 225px;
 }
-
 @mixin div-padding {
   padding-bottom: 25px;
 }
-
 @mixin dash-form {
   margin-top: 15px;
+
   .form-group {
     margin-top: 5px;
+
     #nueva-post {
       resize: none;
       border: none;
       width: 258px;
     }
+
     input {
       width: 0.1px;
       height: 0.1px;
@@ -93,6 +90,7 @@
       width: 258px;
       height: 36px;
     }
+
     .inputfile + label {
       font-size: 16px;
       font-weight: 700;
@@ -101,6 +99,7 @@
       background-color: green;
     }
   }
+
   button {
     margin-top: 15px;
     width: 258px;
@@ -111,7 +110,6 @@
     color: #fff;
   }
 }
-
 // Modal black out
 @mixin modalTint {
   display: none;
@@ -122,13 +120,30 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
 @mixin modalContent {
   background-color: #f4f4f4;
   border-radius: 18px;
   margin: 10% auto;
   width: 320px;
   height: 320px;
+}
+// Comments Mixins
+@mixin commentSize {
+  font-size: 14px;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+@mixin username {
+  font-weight: 800;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+@mixin closeX {
+  &:hover {
+    cursor: pointer;
+  }
 }

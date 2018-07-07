@@ -15,7 +15,7 @@
       <button type="button" name="button">Authorized Apps</button>
       <button type="button" name="button">Notifications</button>
       <button type="button" name="button">Privacy and Security</button>
-      <button type="button" name="button"><a class="_8oogout" href="{{ route('logout') }}">Log out</a></button>
+      <button type="button" name="button"><a class="_logout" href="{{ route('logout') }}">Log out</a></button>
       <button id="cancelBtn" type="button" name="button">Cancel</button>
     </div>
   </div>
@@ -59,21 +59,38 @@
         </div>
       </div>{{-- Image Button Ends --}}
       <section class="onelove">{{-- User's Option section --}}
+      @if (Auth::check())
         <div class="LMnop">{{-- Section A start --}}
-          <h2 class="flexer">{{ $user->username }}</h2>
+          <h2 class="flexer">{{ Auth::user()->getUsernameOrFirstname() }}</h2>
           <button class="btn1 flexer" type="button" name="button">Edit Profile</button>
 
           {{-- <button id="modalclick"><i class="fas fa-cog"></i></button> --}}
           <div id="modalclick"><i class="fas fa-cog"></i></div>
         </div>{{-- Section A ends --}}
+
         <ul class="follow-info">{{-- Section C --}}
           <li><span class="post">0</span> Posts</li>
           <li><span class="foler">0</span> Followers</li>
           <li><span class="foling">0</span> Following</li>
         </ul>{{-- Section C ends --}}
         <div class="name">{{-- Section D--}}
-          <h1>{{ $user->firstname }}</h1>
+          <h1>{{ Auth::user()->getNameOrUsername() }}</h1>
         </div>{{-- Section D ends --}}
+      @else
+        <div class="LMnop">{{-- Section A start --}}
+          <h2 class="flexer">{{ $user->username }}</h2>
+          <button class="btn1 flexer" type="button" name="button">Follow</button>
+
+          {{-- <button id="modalclick"><i class="fas fa-cog"></i></button> --}}
+          <div id="modalclick"><i class="fas fa-cog"></i></div>
+        </div>{{-- Section A ends --}}
+
+        <ul class="follow-info">{{-- Section C --}}
+          <li><span class="post">0</span> Posts</li>
+          <li><span class="foler">0</span> Followers</li>
+          <li><span class="foling">0</span> Following</li>
+        </ul>{{-- Section C ends --}}
+      @endif
       </section>{{-- User's Option section ends --}}
     </div>{{-- Top Carder or Header Card --}}
 

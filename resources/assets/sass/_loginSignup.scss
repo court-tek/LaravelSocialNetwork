@@ -4,24 +4,75 @@
 }
 
 // Login or Register
-#weclome-container{
-  display: block;
+.welcome-box{
   position: absolute;
-  min-height: 100%;
+  top: 205px;
+  right: 399px;
   background: #fff;
-  top: 0;
-  right: 0;
-  width: 400px;
+  padding: 8px;
+  h1{
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
+}
+#weclome-container{
+  @include container;
+  display: block;
+
+  // paragraph styles below
+  p{
+    @include welcomeParagraph;
+  }
+  .a{
+    @include parag1;
+  }
+  P:nth-of-type(2){
+    @include parag2;
+  }
+  .c{
+    @include parag3;
+    ._login{
+      @include parag3_2;
+    }
+  }
+  // paragraph styles ends
+  input[type=text]{
+    @include formInput;
+  }
+  input[type=submit] {
+    @include theButton;
+  }
 }
 
-#weclome2{
+#welcome2{
+  @include container;
   display: none;
-  position: absolute;
-  min-height: 100%;
-  background: #fff;
-  top: 0;
-  right: 0;
-  width: 400px;
+  p{
+    @include welcomeParagraph;
+  }
+  .a{
+    @include parag1;
+  }
+  P:nth-of-type(2){
+    @include parag2;
+    a{
+      text-decoration: none;
+      color: #262626;
+    }
+  }
+  .c{
+    @include parag3;
+    ._signup{
+      @include parag3_2;
+  }
+  }
+  input[type=text]{
+    @include formInput;
+  }
+  input[type=submit] {
+    @include theButton;
+  }
 }
 //
 // .sign-In{

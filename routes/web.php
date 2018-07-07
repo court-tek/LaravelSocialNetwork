@@ -12,24 +12,47 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('home');
+  /**
+   * Home
+   */
+  Route::get('/', function () {
+      return view('welcome');
+  })->name('home');
 
-    Route::post('/signup', [
-        'uses' => 'UserController@postSignUp',
-        'as' => 'signup'
-    ]);
+  /**
+   * Authentication
+   */
+  Route::post('/signup', [
+      'uses' => 'UserController@postSignUp',
+      'as' => 'signup',
+  ]);
 
-    Route::post('/signin', [
-        'uses' => 'UserController@postSignin',
-        'as' => 'signin'
-    ]);
+  Route::post('/signin', [
+      'uses' => 'UserController@postSignin',
+      'as' => 'signin',
+  ]);
 
-    Route::get('/logout', [
+  Route::get('/logout', [
       'uses' => 'UserController@getLogout',
       'as' => 'logout'
-    ]);
+  ]);
+
+  /**
+   * Search
+   */
+  Route::get('/search', [
+      'uses' => 'SearchController@index',
+      'as' => 'search.results',
+  ]);
+    // Comments
+    Route::post('/comment', function(\Illuminate\Http\Request $request) {
+      return response()->json(['message' => $request['postId']]);
+    })->name('comment');
+
+    // Route::post('/comment', [
+    //   'uses' => 'CommentsController@store',
+    //   'as' => 'comment'
+    // ]);
 
     Route::get('/dashboard/{slug}', [
       'uses' => 'UserController@getDashboard',
@@ -44,10 +67,5 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/createpost', [
       'uses' => 'PostController@postCreatePost',
       'as' => 'post.create'
-    ]);
-
-    Route::post('comments/{post_id}', [
-      'uses' => 'CommentsController@store',
-      'as' => 'comments.store'
     ]);
 });
