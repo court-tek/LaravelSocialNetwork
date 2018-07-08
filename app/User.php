@@ -38,10 +38,15 @@ class User extends Model implements Authenticatable
     {
         return $this->getName() ?: $this->username;
     }
-    
+
     public function getUsernameOrFirstname()
     {
         return $this->username ?: $this->firstname;
+    }
+
+    public function getAvatarUrl()
+    {
+        return "https://www.gravatar.com/avatar/{{ md5($this->email) }}?d=mm";
     }
 
     public function posts()

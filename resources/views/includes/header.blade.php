@@ -11,9 +11,9 @@
 
     </div>
 
-    <form class="search-area _ohiyl" action="{{ route('search.results') }}">
+    <form class="search-area _ohiyl" method="GET" role="search" action="{{ route('results') }}">
       <span class="mag-glass"><i class="fa fa-search" aria-hidden="true"></i></span>
-      <input class="_qvcci " id="filter" type="text" placeholder="Search">
+      <input class="_qvcci " id="filter" name="query" type="text" placeholder="Search">
       <div class="_x"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
     </form>
 
@@ -26,7 +26,7 @@
           <i class="far fa-heart"></i>
         </a>
 
-      <a href="{{ route('dashboard', [auth()->user()->slug]) }}">
+      <a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">
           <i class="far fa-user"></i>
         </a>
 

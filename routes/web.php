@@ -41,23 +41,28 @@ Route::group(['middleware' => ['web']], function () {
    * Search
    */
   Route::get('/search', [
-      'uses' => 'SearchController@index',
-      'as' => 'search.results',
+      'uses' => 'SearchController@getResults',
+      'as' => 'results',
   ]);
+
+  /**
+   * User Profile
+   */
+  // Route::get('/dashboard/{slug}', [
+  //    'uses' => 'UserController@getDashboard',
+  //    'as' => 'dashboard'
+  // ])->where('slug', '[\w\d\-\_]+');
+
+  Route::get('/user/{username}', [
+     'uses' => 'UserController@getDashboard',
+     'as' => 'profile.index'
+  ]);
+
     // Comments
     Route::post('/comment', function(\Illuminate\Http\Request $request) {
       return response()->json(['message' => $request['postId']]);
     })->name('comment');
 
-    // Route::post('/comment', [
-    //   'uses' => 'CommentsController@store',
-    //   'as' => 'comment'
-    // ]);
-
-    Route::get('/dashboard/{slug}', [
-      'uses' => 'UserController@getDashboard',
-      'as' => 'dashboard'
-    ])->middleware('auth')->where('slug', '[\w\d\-\_]+');
 
     Route::get('/timeline', [
       'uses' => 'PostController@getTimeline',

@@ -23,11 +23,11 @@ header {
       margin: 0 auto;
       position: relative;
       min-width: 260px;
-      width: 250px;
+      width: 300px;
       padding-left: 80px;
       // border-radius: 4px;
 
-      ._qvcci[type=text] {
+      ._qvcci[type="text"] {
         background-color: #fff;
         border: 1px solid grey;
         height: 28px;
@@ -49,10 +49,10 @@ header {
       ._x {
         color: grey;
         position: absolute;
-        display: inline-block;
-        left: 242px;
-        top: 9px;
-        font-size: 13px;
+        display: block;
+        right: 5px;
+        top: 8px;
+        font-size: 14px;
       }
     }
 

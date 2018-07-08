@@ -1442,11 +1442,11 @@ header .head-container .search-area {
   margin: 0 auto;
   position: relative;
   min-width: 260px;
-  width: 250px;
+  width: 300px;
   padding-left: 80px;
 }
 
-header .head-container .search-area ._qvcci[type=text] {
+header .head-container .search-area ._qvcci[type="text"] {
   background-color: #fff;
   border: 1px solid grey;
   height: 28px;
@@ -1468,10 +1468,10 @@ header .head-container .search-area .mag-glass {
 header .head-container .search-area ._x {
   color: grey;
   position: absolute;
-  display: inline-block;
-  left: 242px;
-  top: 9px;
-  font-size: 13px;
+  display: block;
+  right: 5px;
+  top: 8px;
+  font-size: 14px;
 }
 
 header .head-container ._ohiyl {
@@ -1492,7 +1492,7 @@ header .head-container .user-area a {
 }
 
 #foot-container .foot-main {
-  padding: 24px;
+  padding: 8px;
   text-align: center;
 }
 
@@ -2184,25 +2184,44 @@ header .head-container .user-area a {
   cursor: pointer;
 }
 
+.search {
+  padding: 90px 20px 20px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   font-family: "Raleway", sans-serif;
   height: 100%;
 }
 
 body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #ededed;
+  height: 100vh;
+  margin: 0;
 }
 
 #container {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 #foot-container {
-  grid-row-start: 2;
-  grid-row-end: 3;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 20px;
 }
 
 .elJefe {

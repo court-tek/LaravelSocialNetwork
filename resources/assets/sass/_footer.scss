@@ -1,18 +1,18 @@
-#foot-container{
+#foot-container {
   background-color: $cyanType3;
 
-  .foot-main{
-    padding: 24px;
+  .foot-main {
+    padding: 8px;
     text-align: center;
-    ul{
+    ul {
       display: inline-block;
-      li{
+      li {
         font-size: 13px;
         padding-left: 12px;
         display: inline-block;
       }
     }
-    span{
+    span {
       padding-left: 30px;
     }
   }

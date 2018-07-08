@@ -8,12 +8,18 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
 
-    public function getDashboard($slug)
+    public function getDashboard($username)
     {
+        $user = User::where('username', $username)->first();
+
+        if (!$user) {
+          abort(404);
+        }
+        return view('profile.index')->with('user', $user);
         // Fetch from the DB baseed on slug
-        $user = User::where('slug', '=', $slug)->first();
+        // $user = User::where('slug', '=', $slug)->first();
         // return the view and pass in the post object
-        return view('dashboard')->withUser($user);
+        // return view('dashboard')->withUser($user);
     }
 
     public function postSignUp(Request $request)
@@ -49,10 +55,11 @@ class UserController extends Controller
           'email' => 'required',
           'password' => 'required'
         ]);
-        if (Auth::attempt(['email' => $request['email'], 'password' => $request['password']])) {
-          return redirect()->route('timeline');
+        if (!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))) {
+          return redirect()->back();
         }
-        return redirect()->back();
+
+        return redirect()->route('timeline');
     }
 
     public function getLogout()

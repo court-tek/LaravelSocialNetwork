@@ -16,8 +16,6 @@
         <div id="app-container">
           @yield('bible')
         </div>
-        {{-- @include('includes.footer') --}}
         @include('includes.awesomeSauce')
-        <script src="{{mix('js/app.js')}}" ></script>
     </body>
 </html>
